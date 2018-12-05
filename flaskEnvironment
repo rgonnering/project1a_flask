@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# flaskEnvironment
+# bash script to setup flask environment system variables
+#
+# set file as an executable
+#       Add shebang line in the first line:
+#           #!/bin/bash
+#       Mark the file as executable using
+#           chmod u+x filename  
+# Run as:
+#       $ ./flaskEnvironment
+
+echo "Setup the flask environment"
+echo
+echo "Setting FLASK_APP to application.py ..."
+export FLASK_APP=application.py
+echo $FLASK_APP
+echo
+echo "Setting FLASK_DEBUG to 1 ..."
+export FLASK_DEBUG=1
+echo $FLASK_DEBUG
+echo
+echo "Setting DATABASE_URL ..."
+export DATABASE_URL="postgresql://rwg:sql@localhost:5432/project1"
+echo $DATABASE_URL
+echo
+echo "Done setting up the flask environment"
+
+
